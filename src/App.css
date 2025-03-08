@@ -1,42 +1,337 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* General Styles */
+.home-content-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+body{
+  box-sizing: border-box; 
+}
+html{
+  overflow-x: hidden;
+  max-width: 100%;
+}
+.main-content{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 60px; 
+}
+
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  flex-shrink: 0;
+}
+.fixed-navbar {
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333;
+    padding: 10px 20px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  width: 50px;
+  height: 50px;
+  color: rgb(168, 31, 31);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.logo span{
+  color: #00aaff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu li {
+  padding: 10px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #00aaff;
+}
+
+/* Dropdown */
+.dropdown select {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+      display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-menu {
+      display: none;
+      flex-direction: column;
+      background: #222;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      padding: 10px;
+  }
+
+  .nav-menu.active {
+      display: flex;
+  }
+}
+.outlet-content {
+  flex-grow: 1; /* Push footer to bottom */
+}
+/* Footer.css */
+.footer {
+  flex-shrink: 0;
+}
+.footer-container {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.footer-fixed{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: -1000;
+  padding: 10px 20px;
+}
+
+/* HomeContent.css */
+
+
+
+/* Header Styling */
+.home-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+
+.home-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.home-header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* About Section */
+.about-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.about-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Team Container */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Team Member */
+.team-member {
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 45%;
+  max-width: 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .team-member {
+      width: 80%;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  .home-header h2 {
+      font-size: 1.5rem;
+  }
+
+  .home-header p {
+      font-size: 1rem;
+  }
+
+  .team-member {
+      width: 100%;
   }
 }
 
-.card {
-  padding: 2em;
+/* About Page Styling */
+.about-content-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
 }
 
-.read-the-docs {
-  color: #888;
+.about-overview {
+  background: #f8f8f8;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.about-overview h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.about-overview p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Services Section */
+.services-section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services-section h3 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.services-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services-section li {
+  font-size: 1.2rem;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.services-section li:last-child {
+  border-bottom: none;
+}
+
+/* Team Section */
+.team-details {
+  margin-top: 20px;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h4 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Contact Section */
+.contact-info {
+  margin-top: 20px;
+  background: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.contact-info h3 {
+  font-size: 1.8rem;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 90%;
+  }
+
+  .about-overview,
+  .services-section,
+  .contact-info {
+    padding: 20px;
+  }
 }
