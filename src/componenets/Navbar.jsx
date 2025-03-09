@@ -27,7 +27,7 @@ const Navbar = () => {
                 <li><NavLink to="/" style={({ isActive }) => isActive ? activeStyles : null}>Home</NavLink></li>
                 <li><NavLink to="/About" style={({ isActive }) => isActive ? activeStyles : null}>About</NavLink></li>
                 <li><NavLink to="/blog">Blog</NavLink></li>
-                <li><NavLink to="/projects">Projects</NavLink></li>
+                <li><NavLink to="/Projects">Projects</NavLink></li>
                 <li className="dropdown">
                     <select id="services" defaultValue="" onChange={() => setIsOpen(false)}>
                         <option value="" disabled>-- Services --</option>
