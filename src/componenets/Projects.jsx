@@ -3,11 +3,11 @@ import React, { useState } from "react";
 const projectsData = [
     {
         id: 1,
-        title: "",
-        tech: "",
-        description: ".",
-        source: "",
-        preview: ""
+        title: "twggs",
+        tech: "python",
+        description: "shshhshsjhjhs.",
+        source: "sss",
+        preview: "ssss"
     },
 ];
 

@@ -1,3 +1,4 @@
+import img from '../assets/avatar1.jpg'
 export default function About() {
     return (
         <div className="about-content-container">
@@ -18,10 +19,12 @@ export default function About() {
                 <h3>Meet Our Team</h3>
                 <div className="team-container">
                     <div className="team-member">
+                        <img src={img} alt='Edward' className="team-img"/>
                         <h4>Edward Karani Muthii</h4>
                         <p>Backend & Full-Stack Developer specializing in Django & React.</p>
                     </div>
                     <div className="team-member">
+                    <img src={img} alt='Edward' className="team-img"/>
                         <h4>Robert Njega</h4>
                         <p>Frontend & UI/UX Designer with expertise in React & CSS frameworks.</p>
                     </div>

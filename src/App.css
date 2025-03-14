@@ -1,4 +1,44 @@
 /* General Styles */
+:root{
+  --background-light: #ffffff;
+  --background-dark:  #1e1e1e;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+}
+body{
+  background: var(--background-light);
+  color: var(--text-dark);
+  transition: background-color 0.3s ease,color 0.3s ease;
+}
+.dark-mode{
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Toggle Button Styling */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.light-mode-btn {
+  background-color: #333;
+  color: white;
+}
+.dark-mode-btn {
+  background-color: white;
+  color: black;
+}
+
 .home-content-container {
   font-family: Arial, sans-serif;
   padding: 20px;
@@ -90,6 +130,7 @@ html{
   cursor: pointer;
 }
 
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .menu-icon {
@@ -139,13 +180,42 @@ html{
 
 /* HomeContent.css */
 
+/* darkmode */
+.dark{
+  width: 70px;
+  background: #000000;
+  height: 35px;
+  border-radius: 15px;
+  position: absolute;
+  top: 16%;
+  left:50%
+}
+/* .light{
+  position: absolute;
+  top: 0%;
+  left:0%;
+  background: #830808;
+  height: 35px;
+  width: 35px;
+  border-radius: 15px;
 
+} */
+@media screen and (max-width:560px) {
+  .dark{
+    height: 15px;
+    top: 18%;
+  }
+  /* .light{
+    height: 15px;
+  } */
+}
 
 /* Header Styling */
 .home-header {
   text-align: center;
   padding: 40px 20px;
   background-color: #f8f9fa;
+  position: relative;
 }
 
 .home-header h2 {
@@ -343,6 +413,12 @@ html{
   width: 300px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+.team-img{
+  border: 1px solid transparent;
+  border-radius: 50%;
+  padding: 20px;
+  height: 90px;
+}
 
 .team-member h4 {
   font-size: 1.5rem;
@@ -465,4 +541,50 @@ html{
 
 .btn:hover {
   background: #005bb5;
+}
+
+/* Accordion Wrapper */
+.accordion-wrapper {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.accordion-wrapper h3 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.accordionItem {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+}
+.accordionItem:hover {
+  background-color: #f1f1f1;
+}
+.question h4 {
+  font-size: 18px;
+  color: #222;
+  margin: 0;
+}
+.answer {
+  padding: 10px;
+  margin-top: 5px;
+  background: #eef1f5;
+  border-radius: 5px;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.answer h4 {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
 }
