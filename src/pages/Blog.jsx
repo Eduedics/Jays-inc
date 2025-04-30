@@ -27,7 +27,7 @@ function Blog() {
     
   return (
     <div className='Blogwrapper'>
-        <p>welcome back <span>Edu</span> </p>
+        <p>welcome back <span>{posts.creator.username}</span> </p>
         <form className='searchFilter'>
             <div className='searchInputWrapper'>
                 <input type='text' placeholder='Enter your search' />
