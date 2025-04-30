@@ -1,5 +1,6 @@
 import Register from './pages/Register'
 import Login from './pages/Login'
+import Logout from './pages/Logout'
 import './App.css'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -17,6 +18,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path ='/blog' element = {<Blog/>} />
     <Route path ='/register' element = {<Register/>} />
     <Route path ='/login' element = {<Login/>} />
+    <Route path ='/logout' element = {<Logout/>} />
   </Route>
   
 ))
