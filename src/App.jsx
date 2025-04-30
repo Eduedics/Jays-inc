@@ -10,15 +10,16 @@ import Blog from './pages/Blog'
 import {createBrowserRouter, createRoutesFromElements, RouterProvider,Route} from 'react-router-dom'
 
 import { AuthProvider } from './utils/AuthRequired';
+import PrivateRoute from './utils/PrivateRoutes'
 
 
 const router = createBrowserRouter(createRoutesFromElements(
   
-  <Route path='/' element={<Home/>}>
+  <Route path='/' element={<Home />}>
     <Route index element={<HomeContent/>}/>
     <Route path='/About' element={<About/>}/>
     <Route path='/Projects' element={<Projects/>}/>
-    <Route path ='/blog' element = {<Blog/>} />
+    <Route path ='/blog' element = {<PrivateRoute><Blog/></PrivateRoute>} />
     <Route path ='/register' element = {<Register/>} />
     <Route path ='/login' element = {<Login/>} />
     <Route path ='/logout' element = {<Logout/>} />

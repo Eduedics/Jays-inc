@@ -21,7 +21,7 @@ function Login() {
   };
 
   return (
-    <form onSubmit={handleLogin}>
+    <form onSubmit={handleLogin} className='registerForm'>
       <input
         placeholder="Username"
         value={credentials.username}
