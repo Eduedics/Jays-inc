@@ -1,4 +1,4 @@
-
+import Register from './pages/Register'
 import './App.css'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -14,6 +14,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path='/About' element={<About/>}/>
     <Route path='/Projects' element={<Projects/>}/>
     <Route path ='/blog' element = {<Blog/>} />
+    <Route path ='/register' element = {<Register/>} />
   </Route>
   
 ))
