@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react';
 import { Search } from 'lucide-react';
+import AuthContext from '../utils/AuthRequired';
 
 function Blog() {
-    const [posts, setPosts] = React.useState([]);
-  const [loading, setLoading] = React.useState(true);
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  React.useEffect(() => {
+  const {user} = useContext(AuthContext)
+
+  useEffect(() => {
     fetch('http://127.0.0.1:8000/post/')
       .then(response => {
         if (!response.ok) {
@@ -27,7 +30,7 @@ function Blog() {
     
   return (
     <div className='Blogwrapper'>
-        <p>welcome back <span>{posts.creator.username}</span> </p>
+        <p>welcome back <span>{user?.username || 'Guest'}</span> </p>
         <form className='searchFilter'>
             <div className='searchInputWrapper'>
                 <input type='text' placeholder='Enter your search' />

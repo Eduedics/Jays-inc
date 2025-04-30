@@ -9,8 +9,11 @@ import Projects from './componenets/Projects'
 import Blog from './pages/Blog'
 import {createBrowserRouter, createRoutesFromElements, RouterProvider,Route} from 'react-router-dom'
 
+import { AuthProvider } from './utils/AuthRequired';
+
 
 const router = createBrowserRouter(createRoutesFromElements(
+  
   <Route path='/' element={<Home/>}>
     <Route index element={<HomeContent/>}/>
     <Route path='/About' element={<About/>}/>
@@ -21,12 +24,13 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path ='/logout' element = {<Logout/>} />
   </Route>
   
+  
 ))
 function App() {
   return (
-    <>
+    <AuthProvider>
       <RouterProvider router={router} />
-    </>
+    </AuthProvider>
   )
 }
 
