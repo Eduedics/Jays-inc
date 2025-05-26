@@ -1,4 +1,4 @@
-import axios from '../utils/axios'; 
+import axios from '../utils/axios';
 import { useState } from 'react';
 
 function Register() {
@@ -20,32 +20,35 @@ function Register() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='registerForm'>
-      <input
-        value={form.username}
-        placeholder="Username"
-        onChange={(e) => setForm({ ...form, username: e.target.value })}
-      />
-      <input
-        value={form.email}
-        placeholder="Email"
-        onChange={(e) => setForm({ ...form, email: e.target.value })}
-      />
-      <input
-        type="password"
-        value={form.password}
-        placeholder="Password"
-        onChange={(e) => setForm({ ...form, password: e.target.value })}
-      />
-      <button type="submit">Register</button>
-      {error && (
-        <div style={{ color: 'red', marginTop: '10px' }}>
-          {typeof error === 'string'
-            ? error
-            : Object.values(error).map((msg, i) => <div key={i}>{msg}</div>)}
-        </div>
-      )}
-    </form>
+    <div className="loginContainer">
+      <form onSubmit={handleSubmit} className="registerForm">
+        <h2>Register</h2>
+        <input
+          value={form.username}
+          placeholder="Username"
+          onChange={(e) => setForm({ ...form, username: e.target.value })}
+        />
+        <input
+          value={form.email}
+          placeholder="Email"
+          onChange={(e) => setForm({ ...form, email: e.target.value })}
+        />
+        <input
+          type="password"
+          value={form.password}
+          placeholder="Password"
+          onChange={(e) => setForm({ ...form, password: e.target.value })}
+        />
+        <button type="submit">Register</button>
+        {error && (
+          <div className="errorMessage">
+            {typeof error === 'string'
+              ? error
+              : Object.values(error).map((msg, i) => <div key={i}>{msg}</div>)}
+          </div>
+        )}
+      </form>
+    </div>
   );
 }
 

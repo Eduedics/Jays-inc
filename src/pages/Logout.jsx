@@ -4,14 +4,20 @@ function Logout() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // crears state on localstorage
+    // Clear tokens from localStorage
     localStorage.removeItem('access');
     localStorage.removeItem('refresh');
     alert('Logged out');
-    // redirect
     navigate('/login'); 
   };
 
-  return <button onClick={handleLogout}>Logout</button>;
+  return (
+    <div className="logoutContainer">
+      <button onClick={handleLogout} className="logoutButton">
+        Logout
+      </button>
+    </div>
+  );
 }
+
 export default Logout;

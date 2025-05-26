@@ -21,27 +21,30 @@ function Login() {
   };
 
   return (
-    <form onSubmit={handleLogin} className='registerForm'>
-      <input
-        placeholder="Username"
-        value={credentials.username}
-        onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={credentials.password}
-        onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
-      />
-      <button type="submit">Login</button>
-      {error && (
-        <div style={{ color: 'red', marginTop: '10px' }}>
-          {typeof error === 'string'
-            ? error
-            : Object.values(error).map((msg, i) => <div key={i}>{msg}</div>)}
-        </div>
-      )}
-    </form>
+    <div className="loginContainer">
+      <form onSubmit={handleLogin} className="registerForm">
+        <h2>Login</h2>
+        <input
+          placeholder="Username"
+          value={credentials.username}
+          onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={credentials.password}
+          onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
+        />
+        <button type="submit">Login</button>
+        {error && (
+          <div className="errorMessage">
+            {typeof error === 'string'
+              ? error
+              : Object.values(error).map((msg, i) => <div key={i}>{msg}</div>)}
+          </div>
+        )}
+      </form>
+    </div>
   );
 }
 

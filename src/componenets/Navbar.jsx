@@ -28,7 +28,8 @@ const Navbar = () => {
             <ul className={menuOpen ? "nav-menu active" : "nav-menu"}>
                 <li><NavLink to="/" style={({ isActive }) => isActive ? activeStyles : null}>Home</NavLink></li>
                 <li><NavLink to="/About" style={({ isActive }) => isActive ? activeStyles : null}>About</NavLink></li>
-                <li><NavLink to="/Blog" style={({ isActive }) => isActive ? activeStyles : null}>Blog</NavLink></li>
+                <li><NavLink to="/Blog" style={({ isActive }) => isActive ? activeStyles : null}
+                >Blog</NavLink></li>
 
 
                 <li
