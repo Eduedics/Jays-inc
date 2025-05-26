@@ -3,11 +3,27 @@ import React, { useState } from "react";
 const projectsData = [
     {
         id: 1,
-        title: "twggs",
-        tech: "python",
-        description: "shshhshsjhjhs.",
-        source: "sss",
-        preview: "ssss"
+        title: "django-react-jwt-auth",
+        tech: "python/React",
+        description: "A lightweight, secure authentication backend built with Django REST Framework and SimpleJWT. It provides endpoints for user registration, login with JWT (access/refresh tokens), and token refresh, making it ideal for frontend frameworks like React. This API is designed to be easily integrated with modern single-page applications(stateless auth).",
+        source: "https://github.com/Eduedics/django-react-jwt-auth",
+        preview: "https://github.com/Eduedics/django-react-jwt-auth"
+    },
+    {
+        id: 2,
+        title: "tabSaver",
+        tech: "javascript",
+        description: "A simple browser tab-saving tool that allows users to save and manage links locally. Designed for users who want to bookmark tabs quickly without relying on browser bookmarks.",
+        source: "https://github.com/Eduedics/tabSaver",
+        preview: "https://github.com/Eduedics/tabSaver"
+    },
+    {
+        id: 3,
+        title: "Stock Manager System",
+        tech: "Java/Javascript",
+        description: "Stock Manager is a full-featured inventory and stock tracking system designed for store owners and warehouse managers. Built with React for the frontend and Spring Boot for the backend, this system simplifies tracking stock input and output, managing user roles, and organizing products and suppliers across multiple store branches.",
+        source: "https://github.com/RNJEGA/Stock-manager-ui",
+        preview: "https://github.com/RNJEGA/Stock-manager-ui"
     },
 ];
 

@@ -1,5 +1,6 @@
 import axios from '../utils/axios';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Login() {
   const [credentials, setCredentials] = useState({ username: '', password: '' });
@@ -35,6 +36,7 @@ function Login() {
           value={credentials.password}
           onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
         />
+        <p>dont have an account?<Link to='/register'>Register</Link></p>
         <button type="submit">Login</button>
         {error && (
           <div className="errorMessage">
